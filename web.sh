@@ -76,7 +76,7 @@ echo -e "$GREEN Done...$COL_RESET"
 cd $HOME/yiimpserver/yiimp_single
 
 #Updating YiiMP files for Dirty Harry build
-echo -e " Adding the Dirty Harry flare to YiiMP...$COL_RESET"
+echo -e " Adding the SabiasQueSpace flare to YiiMP...$COL_RESET"
 
 sudo sed -i 's/YII MINING POOLS/'${DomainName}' Mining Pool/g' $STORAGE_ROOT/yiimp/site/web/yaamp/modules/site/index.php
 sudo sed -i 's/domain/'${DomainName}'/g' $STORAGE_ROOT/yiimp/site/web/yaamp/modules/site/index.php

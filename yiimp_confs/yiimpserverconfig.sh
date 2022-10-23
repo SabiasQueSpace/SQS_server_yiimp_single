@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ###########################################
-# Created by Dirty Harry for YiiMP use... #
+#              SabiasQueSpace             #
 ###########################################
 
 source /etc/functions.sh
@@ -12,6 +12,15 @@ source $HOME/yiimpserver/yiimp_single/.wireguard.install.cnf
 if [[ ("$wireguard" == "false") ]]; then
 
 echo '<?php
+// HOME Add urgent notes to the home page
+// ADDRESS Shows note by user indicating the address
+define('"'"'URGEN_NOTE'"'"', array (
+    array('"'"'HOME'"'"','"'"'#EAF50A'"'"', '"'"'null'"'"', '"'"'These notes are set to /home/yiimp-data/yiimp/site/configuration/serverconfig.php '"'"'),
+    array('"'"'ADDRESS'"'"','"'"'#EAF50A'"'"', '"'"'addres'"'"', '"'"'Text'"'"'),
+    array('"'"'HOME'"'"','"'"'#43F50A'"'"', '"'"'null'"'"', '"'"'This is an urgent note'"'"')
+   )
+);
+
 ini_set('"'"'date.timezone'"'"', '"'"'UTC'"'"');
 define('"'"'YAAMP_LOGS'"'"', '"'"''"${STORAGE_ROOT}/yiimp/site/log"''"'"');
 define('"'"'YAAMP_HTDOCS'"'"', '"'"''"${STORAGE_ROOT}/yiimp/site/web"''"'"');
@@ -119,7 +128,52 @@ $configCustomPorts = array(
 // mBTC Coefs per algo (default is 1.0)
 $configAlgoNormCoef = array(
 // '"'"'x11'"'"' => 5.0,
-);' | sudo -E tee $STORAGE_ROOT/yiimp/site/configuration/serverconfig.php >/dev/null 2>&1
+);
+
+// COIN MESSAGE = RPC Error: error -8: dummy value must be set to "*", add COIN in line (coin_results.php)
+define('"'"'RPC_ERROR_8'"'"', array(
+    '"'"'NAP'"'"',
+    '"'"'CHI'"'"',
+    '"'"'NAPI'"'"',
+    '"'"'RTM'"'"',
+    '"'"'FITA'"'"',
+    '"'"'BTRM'"'"',
+    '"'"'SIN'"'"',
+    '"'"'BBC'"'"',
+));
+
+// COIN ERROR PAIMENTS = RPC Error (payment.php)
+// todo: enhance/detect payout_max from normal sendmany error
+define('"'"'RPC_ERROR_PAIMENT'"'"', array(
+    '"'"'NAP'"'"',
+    '"'"'CHI'"'"',
+    '"'"'NAPI'"'"',
+    '"'"'BBC'"'"',
+    '"'"'PGN'"'"',
+    '"'"'VTRM'"'"',
+    '"'"'UFO'"'"',
+    '"'"'SIN'"'"',
+    '"'"'BTRM'"'"',
+    '"'"'ZOC'"'"',
+    '"'"'IQ'"'"',
+    '"'"'YERB'"'"',
+    '"'"'SPK'"'"',
+    '"'"'AVN'"'"',
+    '"'"'ADOT'"'"',
+    '"'"'APX'"'"',
+    '"'"'BITC'"'"',
+    '"'"'FITA'"'"',
+    '"'"'BNODE'"'"',
+    '"'"'BOD'"'"',
+    '"'"'DIME'"'"',
+    '"'"'BTCRY'"'"',
+    '"'"'IOTS'"'"',
+    '"'"'ECC'"'"',
+    '"'"'BCRS'"'"',
+    '"'"'SAPP'"'"',
+    '"'"'CURVE'"'"',
+    '"'"'JGC'"'"',
+));' | sudo -E tee $STORAGE_ROOT/yiimp/site/configuration/serverconfig.php >/dev/null 2>&1
 
 else
 

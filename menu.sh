@@ -6,7 +6,7 @@
 
 source /etc/functions.sh
 
-RESULT=$(dialog --stdout --default-item 1 --title "Dirty Harry Yiimp Server Installer v1.0" --menu "Choose one" -1 60 6 \
+RESULT=$(dialog --stdout --default-item 1 --title "SabiasQueSpace Yiimp Server Installer v1.0" --menu "Choose one" -1 60 6 \
 ' ' "- For small private pools -" \
 1 "YiiMP - Single Server" \
 ' ' "- If you plan on adding more servers later -" \

@@ -188,17 +188,17 @@ fi
 
 echo -e " Downloading Low Difficulty Stratum...$COL_RESET"
 cd $STORAGE_ROOT/yiimp/yiimp_setup/yiimp
-hide_output sudo git clone https://github.com/SabiasQueSpace/stratum-lowdiff.git
+hide_output sudo git clone https://github.com/SabiasQueSpace/SQS_stratum-lowdiff.git
 sleep 2s
 
 echo -e " Downloading Full Stratum...$COL_RESET"
 cd $STORAGE_ROOT/yiimp/yiimp_setup/yiimp
-hide_output sudo git clone https://github.com/SabiasQueSpace/stratum-full.git
+hide_output sudo git clone https://github.com/SabiasQueSpace/SQS_stratum-full.git
 sleep 2s
 
 echo -e " Downloading Zentoshi Stratum...$COL_RESET"
 cd $STORAGE_ROOT/yiimp/yiimp_setup/yiimp
-hide_output sudo git clone https://github.com/SabiasQueSpace/stratum-zenx.git
+hide_output sudo git clone https://github.com/SabiasQueSpace/SQS_stratum-full.git
 sleep 2s
 
 echo -e "$GREEN System files installed...$COL_RESET"
